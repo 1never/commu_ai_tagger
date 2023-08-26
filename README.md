@@ -5,6 +5,16 @@
 - ISO 24617-2で定義された対話行為タグのサブセット，および旅行代理店タスクのために設計された対話行為タグを付与することができます．
 
 ## インストール
+必要なライブラリ
+```
+torch
+transformers
+fugashi
+sentencepiece
+unidic-lite
+```
+
+インストール方法
 ```
 git clone
 cd
