@@ -32,7 +32,6 @@ tagger = Tagger(mode="iso", device="cuda:0")
 
 # 対話履歴を入力すると，文脈を考慮した最後の発話に対する対話行為タグを予測する．
 context = ["どこか行きたいところはありますか？", "公園に行きたいです．"]
-
 print(tagger.predict(context)) # Answer
 ```
 
@@ -45,8 +44,7 @@ tagger = Tagger(mode="specific", device="cuda:0")
 
 # 対話履歴を入力すると，文脈を考慮した最後の発話に対する対話行為タグを予測する．
 context = ["どこか行きたいところはありますか？", "公園に行きたいです．"]
-
-print(tagger.predict(context)) 
+print(tagger.predict(context))  # SpotRequirement
 ```
 
 ## タグの一覧
