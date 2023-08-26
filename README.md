@@ -46,6 +46,7 @@ tagger = Tagger(mode="specific", device="cuda:0")
 context = ["どこか行きたいところはありますか？", "公園に行きたいです．"]
 print(tagger.predict(context))  # SpotRequirement
 ```
+[Google Colab](https://colab.research.google.com/drive/1nBvTPS7YIO5VE4NIwWpopg0rIxWjGJHM?usp=sharing)
 
 ## タグの一覧
 [ISOタグ](https://github.com/1never/commu_ai_tagger/blob/main/ISO_TAG.md)  
