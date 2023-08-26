@@ -16,7 +16,38 @@ unidic-lite
 
 インストール方法
 ```
-git clone
-cd
+git clone https://github.com/1never/commu_ai_tagger.git
+cd commu_ai_tagger
 pip install .
 ```
+
+## サンプルコード
+ISOの対話行為タグを付与する場合
+```python
+from commu_ai_tagger import Tagger
+
+# modeでisoを指定．
+tagger = Tagger(mode="iso", device="cuda:0")
+
+# 対話履歴を入力すると，文脈を考慮した最後の発話に対する対話行為タグを予測する．
+context = ["どこか行きたいところはありますか？", "公園に行きたいです．"]
+
+print(tagger.predict(context)) # Answer
+```
+
+旅行代理店タスク専用の対話行為タグを付与する場合
+```python
+from commu_ai_tagger import Tagger
+
+# modeでspecificを指定．
+tagger = Tagger(mode="specific", device="cuda:0")
+
+# 対話履歴を入力すると，文脈を考慮した最後の発話に対する対話行為タグを予測する．
+context = ["どこか行きたいところはありますか？", "公園に行きたいです．"]
+
+print(tagger.predict(context)) 
+```
+
+## タグの一覧
+
+
