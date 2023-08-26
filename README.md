@@ -1,11 +1,12 @@
 # 日本語対話行為タガー
-発話に対して対話行為を付与するライブラリです．
+発話に対して対話行為を付与するためのライブラリです．
 
-- 旅行代理店タスク対話コーパスに付与された対話行為タグを用いて学習を行っています．
+- [旅行代理店タスク対話コーパス](https://aclanthology.org/2022.lrec-1.619/)に付与された対話行為タグを用いて学習を行っています．
 - ISO 24617-2で定義された対話行為タグのサブセット，および旅行代理店タスクのために設計された対話行為タグを付与することができます．
+- [LINE DistilBERT](https://huggingface.co/line-corporation/line-distilbert-base-japanese)をファインチューニングしたモデルを使用しています．
 
 ## インストール
-必要なライブラリ
+実行に必要なライブラリ
 ```
 torch
 transformers
@@ -49,5 +50,23 @@ print(tagger.predict(context))
 ```
 
 ## タグの一覧
+[ISOタグ](https://github.com/1never/commu_ai_tagger/blob/main/ISO_TAG.md)  
+[専用タグ](https://github.com/1never/commu_ai_tagger/blob/main/SPECIFIC_TAG.md)
 
+## 文献情報
+本ライブラリを使用した場合は，以下の文献の引用をお願いします．
+```
+@inproceedings{inaba-etal-2022-collection,
+    title = "Collection and Analysis of Travel Agency Task Dialogues with Age-Diverse Speakers",
+    author = "Inaba, Michimasa  and
+      Chiba, Yuya  and
+      Higashinaka, Ryuichiro  and
+      Komatani, Kazunori  and
+      Miyao, Yusuke  and
+      Nagai, Takayuki",
+    booktitle = "Proceedings of the Thirteenth Language Resources and Evaluation Conference",
+    year = "2022",
+    pages = "5759--5767"
+}
+```
 
