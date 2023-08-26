@@ -6,7 +6,7 @@
 - [LINE DistilBERT](https://huggingface.co/line-corporation/line-distilbert-base-japanese)をファインチューニングしたモデルを使用しています．
 
 ## インストール
-実行に必要なライブラリ
+実行に必要なPythonパッケージ
 ```
 torch
 transformers
